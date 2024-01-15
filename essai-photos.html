@@ -10,6 +10,7 @@
     
     body {
         margin: auto;
+        background-color: black;
     }
 
     section{ 
@@ -19,6 +20,10 @@
 
      #titre {
         text-align: center;
+        color: white;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 35px;
+        padding-bottom: 3%;
      }   
 
      #picture {
@@ -27,7 +32,7 @@
         flex-wrap: wrap;
         width: 800px;
         height: 840px;
-        border: 4px black solid;
+        border: 4px white solid;
      }
 
      #picture img {
@@ -47,6 +52,7 @@
         width: 500px;
         height:300px;
         margin: 20%;
+        border: 4px white solid;
      }
 
     </style>
@@ -78,16 +84,13 @@
     <script>
 
         $(document).ready(function(){
-
-            $("img").mouseover(function(event){
-              console.log(event) 
-              $("BP").append("src=event.target.img")
-            });
-        
+         $("img").mouseover(function(event) {
+                // console.log(event)
+            let imageCourante = $(this).attr("src")
+            $("#BP").empty()
+            $("#BP").append(`<img src="${imageCourante}" />`)
+            })
         })
-
-
-
     </script>
 
 
@@ -95,17 +98,4 @@
     </div>
 </body>
 </html>
-
-
-
-
-
-
-
-  //     $("img").mouseover(function(event) {
-        //         console.log(event)
-        //     let imageCourante = $(this).attr("src")
-        //     $("#BP").empty()
-        //     $("#BP").append(`<img src="${imageCourante}" />`)
-        //     })
-        // })
+  
