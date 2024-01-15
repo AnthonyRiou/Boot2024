@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+<style>
+    .mondiv {
+        width : 400px;
+        height: 100px;
+        border: 1px solid black;   
+     }
+
+     .efface {
+        display: none;
+     }
+
+
+</style>
+
+</head>
+<body>
+
+    <button>ok</button>
+
+<div>
+    <img id="im1" />
+    <div id="text">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo accusamus distinctio repudiandae in quae, aut maiores, sit est tenetur sapiente quos officiis quibusdam dolore iste possimus labore nesciunt cum aliquam!</p>
+    </div>
+    <div id="text2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis porro aliquam illo itaque sequi nulla corrupti nam nemo quas alias distinctio est quae natus perspiciatis sapiente facilis placeat unde, laboriosam facere. Amet numquam dicta, asperiores explicabo optio quas nesciunt, alias eveniet qui tempora voluptatibus culpa quod? Voluptatem dolorem, distinctio, deserunt laudantium inventore perspiciatis architecto recusandae esse fuga repudiandae rerum? Quos qui nesciunt nostrum adipisci iure magnam natus voluptas officiis, consequatur, aperiam eum? Deleniti cumque architecto possimus adipisci eaque eligendi fugiat impedit? Quod nostrum molestias tempore deserunt eveniet labore cumque. Molestias quia vitae soluta. Illo id culpa doloremque explicabo blanditiis voluptatum.</div>
+</div>
+
+
+<script>
+    $(document).ready(function() {
+        $("button").click(function(){
+        $("#im1").attr("src","https://crtb.cloudly.space/app/uploads/crt-bretagne/2019/04/2-pointe-saint-mathieu-emmanuel-berthier-640x480.jpg");
+        $("#text").css("background-color","#84438E");
+        $("#text2").css("background-color","#62E01F").css("color","#F41621")
+      })
+    }
+    )
+
+</script>
+
+</body>
+</html>

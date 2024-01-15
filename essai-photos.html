@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+    <style>
+    
+    body {
+        margin: auto;
+    }
+
+    section{ 
+        display: flex;
+        
+    }
+
+     #titre {
+        text-align: center;
+     }   
+
+     #picture {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 800px;
+        height: 840px;
+        border: 4px black solid;
+     }
+
+     #picture img {
+        width:100%;
+        max-width: 50%;
+        object-fit: cover;
+     }
+
+     #BP {
+        width: 800px;
+        height: 840px;
+        border: 4px black solid;
+     }
+
+     #BP img {
+      
+        width: 500px;
+        height:300px;
+        margin: 20%;
+     }
+
+    </style>
+
+
+</head>
+<body>
+    
+
+    <div id="titre">Les photos</div>
+
+    <section>
+
+        <div id="picture">
+            <img src="./images/Biche.jpg" id="a1" alt="Biche">
+            <img src="./images/Blaireau.jpg" alt="Blaireau">
+            <img src="./images/Cerf.jpg" alt="Cerf">
+            <img src="./images/Couleuvre.jpg" alt="Couleuvre">
+            <img src="./images/Ecureuil.jpg" alt="Ecureuil">
+            <img src="./images/Herisson.jpg" alt="Herisson">
+        </div>
+
+        <div id="BP">
+
+        </div>
+
+    </section>
+
+    <script>
+
+        $(document).ready(function(){
+
+            $("img").mouseover(function(event){
+              console.log(event) 
+              $("BP").append("src=event.target.img")
+            });
+        
+        })
+
+
+
+    </script>
+
+
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+  //     $("img").mouseover(function(event) {
+        //         console.log(event)
+        //     let imageCourante = $(this).attr("src")
+        //     $("#BP").empty()
+        //     $("#BP").append(`<img src="${imageCourante}" />`)
+        //     })
+        // })

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+
+<style>
+    .mondiv {
+        width : 400px;
+        height: 100px;
+        border: 1px solid black;   
+     }
+
+     .efface {
+        display: none;
+     }
+
+
+</style>
+
+</head>
+<body>
+<button>Ajoute</button>
+
+<section>
+
+<div class="c1" id="id1">du texte 1</div>
+<div class="c1" id="id2">du texte 2</div>
+<div class="c1" id="id3">du texte 3</div>
+</section>
+
+<div id="profil">
+   
+</div>
+
+
+
+
+<script>
+    $(document).ready(function() {
+        $("section").on("click",".c1",function() {
+            console.log("execute la function qui va chercher les infos sur " + $(this).attr("id"))
+            let retour = {nom:"jo", prenom:"lagadec", role : "admin"}
+            $("#profil").html(`<h1> ${retour.nom} </h1>`)
+      })
+    $("button").click(function() {
+        $("section").append('<div class="c1" id="id4">du texte 4</div>')
+    });
+});
+
+</script>
+
+</body>
+</html>
